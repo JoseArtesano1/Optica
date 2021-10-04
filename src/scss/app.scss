@@ -1,0 +1,20 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/utilidades';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/botones';
+
+
+/** UI **/
+@import 'layout/header';
+@import 'layout/navegacion';
+@import 'layout/footer';
+@import 'layout/iconos';
+@import 'layout/mapa';
+@import 'layout/carrusel';
+@import 'layout/formularios';
+@import 'layout/cita';
+
+// paginas internas
+@import 'internas/admin';

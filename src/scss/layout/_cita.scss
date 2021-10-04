@@ -1,0 +1,124 @@
+
+ 
+ .contenedor-citas {
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 90vh;
+       
+    }
+
+    .imagen {
+        
+        background-image: url(../img/test.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 20rem;
+        
+    
+        @include tablet {
+            height: auto;
+            width: auto;
+        }
+    }
+    .app {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+.listado-servicios {
+  
+    p {
+        font-size: 1.4rem;
+        color: $grisOscuro;
+        margin: 2rem 0 0 0;
+    }
+    label {
+        font-weight: $bold;
+       
+        display: block;
+    }
+
+    input:not([type="submit"]) 
+     {
+        padding: 1rem;
+        display: block;
+        width: 95%;
+        background-color: $blanco;
+        border: 1px solid $gris;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+table.ConsultaTabla{  //responsive
+
+    @media
+	  only screen 
+    and (max-width: 760px), (min-device-width: 768px) 
+    and (max-device-width: 1024px) {
+        
+		/* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+        tr {
+        margin: 0 0 1rem 0;
+       }
+      
+       tr:nth-child(odd) {
+        background: #ccc;
+       }
+    
+		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+           font-weight: bold;
+           text-shadow: 0.5px 0.5px 0.5px rgb(28, 136, 238); 
+		}
+        
+        td:nth-of-type(1):before { content: "Servicio"; }
+		td:nth-of-type(2):before { content: "Fecha:"; }
+        td:nth-of-type(3):before { content: "Hora Inicio:"; }
+        td:nth-of-type(4):before { content: "Hora Final:"; }
+        
+    }
+  
+
+}
+
+
+.comunicado{
+    background-color: rgb(156, 226, 226);
+    border-radius: 1rem;
+    font-size: medium;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+

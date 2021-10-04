@@ -1,0 +1,31 @@
+@include tablet {
+    .iconos-nosotros {
+        @include grid(3, 2rem);
+        padding: 35px 0;
+    }
+}
+
+.icono {
+    text-align: center;
+    img {
+        height: 10rem;
+    }
+    h3 {
+        text-transform: uppercase;
+    }
+}
+
+.tabla-precio {
+    border: 1px solid #e1e1e1;
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    transition: all .3s ease;
+    
+  }
+  
+ .tabla-precio:hover {
+    transform: scale(1.1);
+    border: 1px solid #fe4918;
+    box-shadow: 0px 0px 50px #666;
+  }

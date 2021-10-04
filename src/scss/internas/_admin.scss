@@ -1,0 +1,218 @@
+.alerta{
+    padding: .5rem;
+    text-align: center;
+    color: $blanco;
+    font-weight: $bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    
+    &.error{
+       background-color: $amarillo;
+    }
+
+    &.exito{
+        background-color: $verde;
+    }
+}
+
+
+
+table.ServiciosTabla{  //responsive
+
+    @media
+	  only screen 
+    and (max-width: 760px), (min-device-width: 768px) 
+    and (max-device-width: 1024px) {
+        
+		/* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+        tr {
+        margin: 0 0 1rem 0;
+       }
+      
+       tr:nth-child(odd) {
+        background: #ccc;
+       }
+    
+		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+            font-weight: bold;
+            text-shadow: 0.5px 0.5px 0.5px rgb(28, 136, 238); 
+		}
+        
+        td:nth-of-type(1):before { content: "Id"; }
+	    	td:nth-of-type(2):before { content: "Denominacion:"; }
+        td:nth-of-type(3):before { content: "Duración:"; }
+        td:nth-of-type(4):before { content: "Técnico:"; }
+        td:nth-of-type(5):before { content: "Imagen:"; }
+    }
+
+}
+
+
+
+table.tablasConf{  //tamaño escritorio para todas las tablas
+  margin-top: 4rem;
+  width: 100%;
+  border-spacing: 0;
+  tbody tr:nth-child(odd) {
+      background: linear-gradient(to bottom, rgba(3, 100, 179, 0.1), rgba(176, 192, 236, 0.5));
+    }
+    
+    tbody tr:nth-child(even) {
+      background: linear-gradient(to bottom, rgba(68, 114, 129, 0.1), rgba(101, 192, 192, 0.5));
+    }
+
+    tbody td {
+      text-align: center;
+    }
+    
+    tfoot th {
+      text-align: right;
+    }
+    
+  thead{
+      background-color: $verde;
+      text-align: center;
+      color: $blanco;
+      text-shadow: 1px 1px 1px black; 
+      th{
+          color: $blanco;
+          padding: 2rem;
+      }
+  }
+
+  .imagen-tabla{
+      width: 8rem;
+     margin: auto;
+      
+  }
+
+}
+
+
+
+.imagen-small{
+    width: 6rem;
+}
+
+
+
+table.tablaGeneral{  // tabla responsive para citas y usuarios
+  @media  
+  only screen 
+  and (max-width: 768px), (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+      
+  /* Force table to not be like tables anymore */
+   table, thead, tbody, th, td, tr {
+    display: block;
+   }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+   thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+   }
+
+      tr {
+      margin: 0 0 1rem 0;
+      }
+    
+     tr:nth-child(odd) {
+      background: #ccc;
+     }
+  
+   td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 7%;
+    text-align: left;
+    font-size: 1.5rem;
+  
+   }
+
+   td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0;
+    left: 6px;
+    width: 20%;
+    padding-right: 56px;
+    white-space: nowrap;
+          font-weight: bold;
+          text-shadow: 0.5px 0.5px 0.5px rgb(28, 136, 238); 
+          
+   }
+   
+  }
+
+}
+
+
+table.usuariosTabla{  // tabla responsive
+
+  @media  
+  only screen 
+  and (max-width: 768px), (min-device-width: 768px) 
+  and (max-device-width: 1024px){
+
+    //encabezados
+    td:nth-of-type(1):before { content: "Id"; }
+    td:nth-of-type(2):before { content: "Nombre:"; }
+    td:nth-of-type(3):before { content: "Teléfono:"; }
+    td:nth-of-type(4):before { content: "@:"; }
+
+  }
+
+}
+
+table.CitasTabla{
+
+  @media  
+  only screen 
+  and (max-width: 768px), (min-device-width: 768px) 
+  and (max-device-width: 1024px){
+
+    //encabezados
+    td:nth-of-type(1):before { content: "Id"; }
+    td:nth-of-type(2):before { content: "Nombre:"; }
+    td:nth-of-type(3):before { content: "Teléfono:"; }
+    td:nth-of-type(4):before { content: "@:"; }
+    td:nth-of-type(5):before { content: "Servicio:"; }
+    td:nth-of-type(6):before { content: "Fecha:"; }
+    td:nth-of-type(7):before { content: "Hora Inicio:"; }
+    td:nth-of-type(8):before { content: "Hora Final:"; }
+
+  }
+
+}
